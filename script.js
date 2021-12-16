@@ -11,15 +11,15 @@ document.querySelector(".check").addEventListener("click", function () {
   const guess = Number(document.querySelector(".guess").value);
   //if there is no number
   if (!guess) {
-    displayMessage("There is no number!");
+    displayMessage("⛔️ There is no number!");
     //if the number is wrong
   } else if (guess !== secretNumber) {
-    displayMessage(guess > secretNumber ? "Too high!" : "Too low!");
+    displayMessage(guess > secretNumber ? "📈 Too high!" : "📉 Too low!");
     score--;
     document.querySelector(".score").textContent = score;
     //if the number is right
   } else if (guess === secretNumber) {
-    displayMessage("You win!");
+    displayMessage("🎉 You win!");
     document.querySelector("body").style.backgroundColor = "green";
     document.querySelector(".number").textContent = guess;
     document.querySelector(".number").style.width = "30rem";
